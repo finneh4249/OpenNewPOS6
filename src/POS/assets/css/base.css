@@ -5,7 +5,9 @@
 *{
     font-family: sans-serif;
 }
-
+a {
+    text-decoration: none;
+}
 
 body{
     background: #333;

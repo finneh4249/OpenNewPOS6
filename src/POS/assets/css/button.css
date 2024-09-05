@@ -149,6 +149,8 @@
     flex-direction: column;
 }
 .itemButton span{
+  font-weight: normal !important;
+
     margin-top: 0;
     font-size: 0.6rem;
     height: 0.6rem;
