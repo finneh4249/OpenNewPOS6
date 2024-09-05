@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/finneh4249/OpenNewPOS6/issues"
   },
-  "homepage": "https://github.com/finneh4249/OpenNewPOS6#readme"
+  "homepage": "https://github.com/finneh4249/OpenNewPOS6#readme",
+  "dependencies": {
+    "react": "^18.3.1"
+  }
 }
