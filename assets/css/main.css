@@ -1,0 +1,22 @@
+@layer reset, base, main, layout, button, menu;
+
+@import url("reset.css") layer(reset);
+@import url("base.css") layer(base);
+@import url("main.css") layer(main);
+@import url("layout.css") layer(layout);
+@import url("button.css") layer(button);
+@import url("menu.css") layer(menu);
+
+@layer main{
+    .menuTitle{
+        font-weight: bold;
+        display: block;
+        margin: auto;
+    }
+    .menuTitle :nth-child(2){
+        font-size: small;
+    }
+}
+
+
+

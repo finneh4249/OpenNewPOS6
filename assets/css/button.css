@@ -1,0 +1,207 @@
+@layer base {
+  button {
+    background: var(--primary);
+    background-image: linear-gradient(to bottom, #dbdbdb, #d0d0d0);
+    border-radius: 1rem;
+    text-shadow: 1px 1px 1px #000;
+    font-family: Arial;
+    color: #000000;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 3px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 4rem;
+    aspect-ratio: 1;
+    height: 4rem;
+  }
+
+  button:hover {
+    background: #c7c7c7;
+    background-image: linear-gradient(to bottom, #c7c7c7, #c7c7c8);
+  }
+
+  .round{
+    border-radius: 50%;
+  }
+}
+
+@layer lunch {
+  .lunchBreakfastButton {
+    background: linear-gradient(to bottom, #007dc1, #0061a7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7', GradientType=0);
+    background-color: #007dc1;
+    border-radius: 3px;
+    border: 1px solid #124d77;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #00152e;
+  }
+
+  .lunchBreakfastButton:hover {
+    background: linear-gradient(to bottom, #0061a7, #007dc1);
+  }
+}
+
+@layer number {
+  .numberButton {
+    background: linear-gradient(to bottom, #dbdbdb, #d0d0d0);
+    border-radius: 1rem;
+    text-shadow: 1px 1px 3px #ffffff;
+    font-family: Arial;
+    color: #000000;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+  }
+
+  .numberButton:hover {
+    background: linear-gradient(to bottom, #c7c7c7, #c7c7c8);
+  }
+}
+
+@layer utilities {
+    .recallNumber{
+        /*Purple Background*/
+        background: linear-gradient(to bottom, #7a00e6, #5c00a3);
+        color: #fff;
+        grid-column: 4;
+    }
+    .recallNumber:hover {
+        background: linear-gradient(to bottom, #5c00a3, #7a00e6);
+    }
+    .recallMobile {
+        /*Green Background*/
+        background: linear-gradient(to bottom, #00b300, #008000);
+        color: #fff;
+        grid-column: 3;
+    }
+    .recallMobile:hover {
+        background: linear-gradient(to bottom, #008000, #00b300);
+    }
+  .managerButton {
+    /* red background */
+    color: #fff;
+    background: linear-gradient(to bottom, #e73855, #9b1b1b);
+    grid-column: 10;
+  }
+  .managerButton:hover {
+    background: linear-gradient(to bottom, #9b1b1b, #e73855);
+  }
+}
+
+@layer total {
+    .total{
+        background: linear-gradient(to bottom, #777, #555);
+        color: #179c13;
+        grid-column: 10;
+    }
+    .total:hover{
+        background: linear-gradient(to bottom, #555, #777);
+        color: #179c13;
+        grid-column: 10;
+    }
+}
+
+.specialFunctions{
+    color: #fff;
+    background: linear-gradient(to bottom, #e73855, #9b1b1b);
+    grid-column: 10;
+}
+
+.purple{
+    background: linear-gradient(to bottom, #8a27cc, #5c00a3);
+    color: #fff;
+}
+
+.menuButton{
+    /*Blue Background*/
+    width: 3.75rem;
+    height: 3.75rem;
+    background: linear-gradient(to bottom, #007dc1, #0061a7);
+    color: #fff;
+}
+
+.menuButton:hover{
+    background: linear-gradient(to bottom, #0061a7,#007dc1);
+}
+
+
+.itemButton{
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-between;
+    border: none;
+    border-radius: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-direction: column;
+}
+.itemButton span{
+    margin-top: 0;
+    font-size: 0.6rem;
+    height: 0.6rem;
+    background: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    white-space: nowrap;
+}
+.l-text{
+    font-size: 0.45rem !important;
+}
+.itemButton .orange{
+    background: #f16a2b;
+}
+
+.red{
+    color: #fff;
+    background: linear-gradient(to bottom, #d62323, #c51a1a);
+}
+
+.red:hover{
+    color: #fff;
+    background: linear-gradient(to bottom, #c51a1a, #d62323);
+
+}
+
+.showPrices{
+    flex-direction: column;
+}
+
+.showPrices :nth-child(2){
+    font-weight: bold;
+    color: #ff0000
+}
+
+.mealButton{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.big-text{
+    font-size: 1.5rem;
+}
+.diamond{
+    height: 3.75rem;
+    width: 3.75rem;
+    border: none;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    
+}
+.makeMeal{
+    /*Aqua Background*/
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(to bottom, #004eb3, #1779c9);
+    color: #fff;
+}

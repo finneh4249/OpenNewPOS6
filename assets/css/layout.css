@@ -1,0 +1,71 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "orderTakingScreen orders"
+        "orderTakingScreen orders"
+        "orderTakingScreen orders"
+        "orderTakingScreen orders"
+        "orderTakingScreen orders"
+        "orderTakingScreen orders";
+    gap: 1rem;
+}
+
+.grid-item {
+    margin-top: 0.25rem;
+    background-color: #eee;
+}
+
+#orderTakingScreen {
+    grid-area: orderTakingScreen;
+}
+
+#orders {
+    grid-area: orders;
+}
+.span-2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#topButtonsRowOne, #topStatus, #topButtonsRowTwo, #numberButtonRow, #menuButtonsRow {
+    display: grid;
+    grid-template-columns: repeat(10, 4rem);
+    grid-template-rows: subgrid;
+}
+.menuButtons{
+    grid-column-start: 3;
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#topButtonsRow, #topStatus, #topButtonsRowTwo {
+    grid-column: 1 / -1;
+}
+
+#numberButtonRow {
+    grid-column: 1 / span 10;
+}
+
+#menuButtonsRowOne {
+    grid-column: 1 / span 10;
+}
+
+select.currentOrder{
+    size:"30";
+    height:400px;
+    width:200px;
+}
+
+select.previousOrders{
+    size:10;
+    height:200px;
+    width:200px;
+}
+
+.lastItem{
+    grid-column: 10;
+}

@@ -1,0 +1,12 @@
+:root{
+    --primary: #dbdbdb;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+
+body{
+    background: #333;
+}
