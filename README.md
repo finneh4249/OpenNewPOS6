@@ -10,6 +10,11 @@ The project is built using HTML, CSS, and JavaScript, ensuring that the emulatio
 
 The OpenNewPOS6 project is an intriguing endeavor that recreates the McDonald's NP# POS system using HTML, CSS, and JavaScript. This simulation serves a dual purpose: it's a playful exploration into the user interface that millions interact with daily, and it's an educational tool that demystifies the ordering process. By understanding the intricacies of the POS system, users can gain insights into the fast-paced world of quick-service restaurants and appreciate the complexity behind a seemingly simple transaction. This project is not just about replicating a system; it's about connecting people with technology in a way that is both informative and engaging.
 
+# Dependencies
+
+- Node.js
+- React
+
 # Contributing
 
 This project is a community-driven initiative to emulate the NP# POS system from McDonald's Australia, and we welcome contributions from developers of all skill levels. To get started, please follow these guidelines:
