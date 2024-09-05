@@ -9,7 +9,6 @@ document.querySelector('.showPrices').addEventListener('click', function(){
 })
 
 document.querySelectorAll('.itemButton').forEach(button => {
-    let counter = 0;
     button.addEventListener('click', function(){
         let select = document.querySelector('#currentOrder select');
         let option = document.createElement('option');
@@ -22,10 +21,18 @@ document.querySelectorAll('.itemButton').forEach(button => {
         text = text.trim();
         const existingOption = Array.from(select.options).find(option => option.value === text);
         if (existingOption) {
+            let counter = 0;
+            if (existingOption.textContent.includes(' ')) {
+                counter = parseInt(existingOption.textContent.split(' ')[0]);
+            }
+            if (existingOption.style.textDecoration === "line-through") {
+                counter = 0;
+            }
             existingOption.textContent = `${++counter} ${text}`;
+            existingOption.style.textDecoration = "none";
         } else {
             option.value = text;
-            option.textContent = `${++counter} ${text}`;
+            option.textContent = `1 ${text}`;
             select.appendChild(option);
         }
         select.value = text;
@@ -54,7 +61,7 @@ document.querySelectorAll('.itemButton').forEach(button => {
                 .join(' ');
             const existingOption = Array.from(select.options).find(option => option.value === text);
             if (existingOption) {
-                existingOption.textContent = `${parseInt(existingOption.textContent) + number} ${text}`;
+                existingOption.textContent = `${parseInt(existingOption.textContent) + number - 1} ${text}`;
             } else {
                 const option = document.createElement('option');
                 option.value = text;
@@ -67,30 +74,38 @@ document.querySelectorAll('.itemButton').forEach(button => {
 
 document.querySelector('#voidLine').addEventListener('click', function(){
     const selectedOption = document.querySelector('#currentOrder select').selectedOptions[0];
-    const select = document.querySelector('#currentOrder select');
-    const previousOrders = document.querySelector('#previousOrders select');
-    if (selectedOption && select.value) {
-        if (numberString.length > 0) {
-            let number = parseInt(numberString);
-            numberString = '';
-            document.querySelector('#numberButtonDisplay').textContent = '';
-            for (let i = 0; i < number; i++) {
-              let text = select.value;
-              for (const child of this.children) {
-                if (child instanceof HTMLSpanElement) {
-                    text += child.textContent + ' ';
-                }
-            }
-                text = text.trim();
-                const existingOption = Array.from(select.options).find(option => option.value === text);
-                if (existingOption) {
-                    existingOption.textContent = `${parseInt(existingOption.textContent) - number} ${text}`;
-                    existingOption.style.textDecoration = 'line-through';
-                    select.removeChild(existingOption);
-                    previousOrders.appendChild(existingOption);
-                }
-            }
+    if (selectedOption) {
+        const option = document.createElement('option');
+        option.value = selectedOption.value;
+        option.textContent = `${selectedOption.textContent} `;
+        option.style.textDecoration = "line-through";
+        document.querySelector('#previousOrders select').appendChild(option);
+        selectedOption.remove();
+        const text = selectedOption.value;
+        const existingOption = Array.from(document.querySelector('#currentOrder select').options).find(option => option.value === text);
+        if (existingOption) {
+            existingOption.textContent = `0 ${text}`;
         }
     }
+})
 
+document.querySelectorAll('.itemButton').forEach(button => {
+    button.addEventListener('click', function(){
+        const select = document.querySelector('#previousOrders select');
+        const selectedOptions = Array.from(select.selectedOptions);
+        if (selectedOptions.length > 0) {
+            const numberString = document.querySelector('#numberButtonDisplay').textContent;
+            const number = parseInt(numberString) || 1;
+            numberString = '';
+            document.querySelector('#numberButtonDisplay').textContent = '';
+            selectedOptions.forEach(option => {
+                const count = parseInt(option.textContent.split(' ')[0]) - number;
+                if (count > 0) {
+                    option.textContent = `${count} ${option.value}`;
+                } else {
+                    option.remove();
+                }
+            })
+        }
+    })
 })
