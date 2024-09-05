@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <script type="text/javascript" src="./assets/js/main.js" defer></script>
 </head>
-<body>
-    
-</body>
-</html>
-
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="till.css">
-        
-        <script type="text/javascript" src="menu.js"></script>
-        <title>OpenNewPOS6</title>
-    </head>
     <body>
         <!-- TODO: Refactor to use a Frontend Framework to dynamically switch between screens.
         OR: Make the Menu Buttons into links to another screen.
@@ -28,9 +16,9 @@
             <div id="orderTakingScreen" class="grid-item">
                 <div id="topButtonsRowOne" class="grid-item">
                     <div class="row-span-2">User Logged</div>
-                    <div class="div"></div>
+                    <div class="div" ><span></span></div>
                     <div class="rowOne">
-                        <div class="block "></div>
+                        <div class="block " id="numberButtonDisplay"></div>
                     <div class="block"></div>
                     <div class="block username">Ethan Cornwill</div>
                     <div class="block date-time">01/01/2020 12:00:48</div>
@@ -73,7 +61,7 @@
                     <button type="button" class="menuButton">Condiments Menu</button>
                     <button type="button" class="menuButton">LSM Promo Menu</button>
 
-                    <button type="button" class="purple">Void Line</button>
+                    <button type="button" class="purple" id="voidLine">Void Line</button>
                 </div>
                 <div id="menuButtonsRow" class="grid-item">
                     <div></div>
@@ -151,8 +139,6 @@
             <div id="orders" class="grid-item">
                 <div id="currentOrder" class="grid-item">
                     <select class="currentOrder" size="30">
-                        <option>test1</option>
-                        <option>test2</option>
                     </select>
                 </div>
                 <div id="previousOrders" class="grid-item">
