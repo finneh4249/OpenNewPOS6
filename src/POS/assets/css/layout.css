@@ -65,18 +65,21 @@
     grid-column: 1 / span 10;
 }
 
+#orders{
+    max-width: 30dvw;
+}
 select.currentOrder{
     margin-left: 1rem;
     size:"30";
     height:400px;
-    width:200px;
+    width:100%;
 }
 
 select.previousOrders{
     margin-left: 1rem;
     size:10;
     height:200px;
-    width:200px;
+    width:100%;
 }
 
 .lastItem{
