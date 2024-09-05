@@ -1,1 +1,1 @@
-console.log('Hello OpenNewPOS6!');
+console.log('Hello OpenNewPOS6!')
