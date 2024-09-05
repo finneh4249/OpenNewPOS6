@@ -1,0 +1,22 @@
+{
+  "name": "opennewpos6",
+  "version": "1.0.0",
+  "description": "# About",
+  "main": "./assets/js/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finneh4249/OpenNewPOS6.git"
+  },
+  "author": "finneh4249",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/finneh4249/OpenNewPOS6/issues"
+  },
+  "homepage": "https://github.com/finneh4249/OpenNewPOS6#readme"
+}
