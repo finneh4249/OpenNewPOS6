@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenNewPOS6</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script type="text/javascript" src="../assets/js/main.js" defer></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="till.css">
+        
+        <script type="text/javascript" src="menu.js"></script>
+        <title>OpenNewPOS6</title>
+    </head>
+    <body>
+        <!-- TODO: Refactor to use a Frontend Framework to dynamically switch between screens.
+        OR: Make the Menu Buttons into links to another screen.
+        BUT: I think it would be better to use a Frontend Framework. 
+        -->
+        <div id="mainScreen" class="grid-container">
+            <div id="orderTakingScreen" class="grid-item">
+                <div id="topButtonsRowOne" class="grid-item">
+                    
+                </div>
+                <div id="topStatus" style="display: None" class="grid-item"></div>
+                <div id="topButtonsRowTwo" class="grid-item">
+                    <button type="button" class="recallMobile round">Recall Mobile Order</button>
+                    <button type="button" class="recallNumber round">Recall By Number</button>
+                    <button type="button" class="managerButton round">Manager</button></div>
+                <div id="numberButtonRow" class="grid-item">
+                    <button type="button" class="numberButton">0</button>
+                    <button type="button" class="numberButton">1</button>
+                    <button type="button" class="numberButton">2</button>
+                    <button type="button" class="numberButton">3</button>
+                    <button type="button" class="numberButton">4</button>
+                    <button type="button" class="numberButton">5</button>
+                    <button type="button" class="numberButton">6</button>
+                    <button type="button" class="numberButton">7</button>
+                    <button type="button" class="numberButton">8</button>
+                    <button type="button" class="numberButton">9</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <div class="span-2 menuTitle"><span>Breakfast Menu</span><span>(4am - 10:30am)</span></div>
+                    <button type="button" class="menuButton"><a href="./menus/breakfast.html">Breakfast Menu</a></button>
+                    <button type="button" class="menuButton">Chicken Menu</button>
+                    <button type="button" class="menuButton">McCafe Menu</button>
+                    <button type="button" class="menuButton">Drinks Menu</button>
+                    <button type="button" class="menuButton">Dessert Menu</button>
+                    <button type="button" class="menuButton">Condiments Menu</button>
+                    <button type="button" class="menuButton">LSM Promo Menu</button>
+
+                    <button type="button" class="purple">Void Line</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <div></div>
+                    <button type="button" class="itemButton"><span>Big Mac</span></button>
+                    <button type="button" class="itemButton "><span class="l-text">Cheeseburger</span></button>
+                    <button type="button" class="itemButton"><span>Quarter</span><span>Pounder</span></button>
+                    <button type="button" class="itemButton"><span>Q Pounder</span><span>Deluxe</span></button>
+                    <button type="button" class="itemButton"><span>Steakhouse</span><span>Stack</span></button>
+                    <button type="button" class="itemButton"><span>Mozarella</span><span>Sticks</span></button>
+                    <button type="button" class="red">Extnd Breakfast</button>
+                    <button type="button" class="red">Happy Meal</button>
+                    <button type="button" class="purple">Promo Item</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <div></div>
+                    <button type="button" class="itemButton"><span>Double</span><span>Big Mac</span></button>
+                    <button type="button" class="itemButton"><span>Double</span><span class="l-text">Cheeseburger</span></button>
+                    <button type="button" class="itemButton"><span>Q Pounder</span><span>Double</span></button>
+                    <button type="button" class="itemButton"><span>QP BBQ</span><span class="l-text">Bacon Onion</span></button>
+                    <div></div>
+                    <div></div>
+                    <button type="button" class="red">MyMaccas Offer</button>
+                    <button type="button" class="red">Wraps Salads</button>
+                    <button type="button" class="purple">Clear Choice</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <div></div>
+                    <button type="button" class="red nuggetButton">Nuggets</button>
+                    <button type="button" class="itemButton"><span>Trp Chsbgr</span></button>
+                    <button type="button" class="itemButton"><span class="orange">$6.95 Sml</span><span class="orange l-text">McSmart Meal</span></button>
+                    <button type="button" class="itemButton"><span>BBQ Bacon</span><span>Angus</span></button>
+                    <button type="button" class="itemButton"><span>Classic</span><span>Angus</span></button>
+                    <div></div>
+                    <button type="button" class="red">Maccas Bundles</button>
+                    <button type="button" class="red">McHappy Day</button>
+                    <button type="button" class="specialFunctions round">Special Functions</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <div></div>
+                    <button type="button" class="mealButton diamond"><span>MINI</span></button>
+                    <button type="button" class="mealButton diamond"><span class="big-text">S</span><span class="l-text">Small</span></button>
+                    <button type="button" class="mealButton diamond"><span class="big-text">M</span><span class="l-text">Standard</span></button>
+                    <button type="button" class="mealButton diamond "><span class="big-text">L</span><span class="l-text">Tall</span></button>
+                    <button type="button" class="mealButton diamond"><span class="big-text">VIP</span></button>
+                    <button type="button" class="mealButton makeMeal"><span>Make Meal</span></button>
+                    <button type="button" class="red">Value Menu</button>
+                    <button type="button" class="red">Trials Menu</button>
+                    <button type="button" class="total round">Delivery Total</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <button type="button" class="itemButton drinks"><span>Coke</span></button>
+                    <button type="button" class="itemButton drinks"><span>Vanilla</span><span>Coke</span></button>
+                    <button type="button" class="itemButton drinks"><span>Coke Zero</span></button>
+                    <button type="button" class="itemButton drinks"><span>Fanta</span></button>
+                    <button type="button" class="itemButton drinks"><span>Sprite</span></button>
+                    <button type="button" class="itemButton drinks"><span class="l-text">Fanta Raspbry</span></button>
+                    <button type="button" class="itemButton drinks"><span>Keri OJ</span></button>
+                    <button type="button" class="red">Monopoly Bundles</button>
+                    <button type="button" class="red">MyMaccas Calendar</button>
+                    <button type="button" class="total round">Eat In Total</button>
+                </div>
+                <div id="menuButtonsRow" class="grid-item">
+                    <button type="button" class="itemButton drinks"><span>Cool Ridge</span></button>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <button type="button" class="red"><span>Frozen Drinks</span></button>
+                    <button type="button" class="red"><span>Shakes & Smoothies</span></button>
+                    <button type="button" class="itemButton drinks"><span class="l-text">Orange Fruit</span><span>Drink</span></button>
+                    <div></div>
+                    <button type="button" class="showPrices round"><span>Show Prices</span><span>OFF</span></button>
+                    <button type="button" class="total round">Take Out Total</button>
+                </div>
+            </div>
+            <div id="orders" class="grid-item">
+                <div id="currentOrder" class="grid-item">
+                    <select class="currentOrder" size="30">
+                        <option>test1</option>
+                        <option>test2</option>
+                    </select>
+                </div>
+                <div id="previousOrders" class="grid-item">
+                    <select class="previousOrders" size="30">
+                        <option>test1</option>
+                        <option>test2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+<style>
+    
+</style>
+    </body>
+</html>
+                        
