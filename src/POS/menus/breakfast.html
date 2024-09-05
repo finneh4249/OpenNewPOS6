@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenNewPOS6</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <script type="text/javascript" src="../assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script type="text/javascript" src="./assets/js/main.js" defer></script>
 </head>
 <body>
     
@@ -27,9 +27,26 @@
         <div id="mainScreen" class="grid-container">
             <div id="orderTakingScreen" class="grid-item">
                 <div id="topButtonsRowOne" class="grid-item">
+                    <div class="row-span-2">User Logged</div>
+                    <div class="div"></div>
+                    <div class="rowOne">
+                        <div class="block "></div>
+                    <div class="block"></div>
+                    <div class="block username">Ethan Cornwill</div>
+                    <div class="block date-time">01/01/2020 12:00:48</div>
+                    </div>
+                    <div class="rowTwo">
+                        <div class="block"></div>
+                    <div class="block posID">POS001</div>
+                    <div class="block posType">FC</div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    </div>
                     
+                    
+                    <div class="block row-span-2 lastItem"></div>
                 </div>
-                <div id="topStatus" style="display: None" class="grid-item"></div>
+
                 <div id="topButtonsRowTwo" class="grid-item">
                     <button type="button" class="recallMobile round">Recall Mobile Order</button>
                     <button type="button" class="recallNumber round">Recall By Number</button>
@@ -47,7 +64,7 @@
                     <button type="button" class="numberButton">9</button>
                 </div>
                 <div id="menuButtonsRow" class="grid-item">
-                    <div class="span-2 menuTitle"><span>Breakfast Menu</span><span>(4am - 10:30am)</span></div>
+                    <div class="span-2 menuTitle"><span>Dinner Menu</span><span>(10:30am - 12am)</span></div>
                     <button type="button" class="menuButton"><a href="./menus/breakfast.html">Breakfast Menu</a></button>
                     <button type="button" class="menuButton">Chicken Menu</button>
                     <button type="button" class="menuButton">McCafe Menu</button>
