@@ -94,7 +94,7 @@ document.querySelectorAll('.itemButton').forEach(button => {
         const select = document.querySelector('#previousOrders select');
         const selectedOptions = Array.from(select.selectedOptions);
         if (selectedOptions.length > 0) {
-            const numberString = document.querySelector('#numberButtonDisplay').textContent;
+            let numberString = document.querySelector('#numberButtonDisplay').textContent;
             const number = parseInt(numberString) || 1;
             numberString = '';
             document.querySelector('#numberButtonDisplay').textContent = '';
