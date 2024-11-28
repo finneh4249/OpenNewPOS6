@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 function MenuSelector({ menus, selectedMenu, onSelect }) {
   return (
@@ -20,5 +20,12 @@ function MenuSelector({ menus, selectedMenu, onSelect }) {
     </div>
   );
 }
+
+MenuSelector.propTypes = {
+  menus: PropTypes.array.isRequired,
+  selectedMenu: PropTypes.object.isRequired,
+  onSelect: PropTypes.func.isRequired,
+};
+
 
 export default MenuSelector;

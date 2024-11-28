@@ -1,5 +1,6 @@
 // src/components/NumberButtonRow.jsx
-import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function NumberButtonRow({ onNumberClick }) {
   const numbers = Array.from({ length: 10 }, (_, i) => i);
@@ -19,5 +20,9 @@ function NumberButtonRow({ onNumberClick }) {
     </div>
   );
 }
+
+NumberButtonRow.propTypes = {
+  onNumberClick: PropTypes.func.isRequired,
+};
 
 export default NumberButtonRow;

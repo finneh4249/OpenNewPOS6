@@ -1,5 +1,10 @@
 // src/components/Menu.jsx
-import React from 'react';
+import PropTypes from 'prop-types';
+
+Menu.propTypes = {
+  items: PropTypes.array.isRequired,
+  addCurrentOrder: PropTypes.func.isRequired,
+};
 
 function Menu({ items, addCurrentOrder }) {
   return (

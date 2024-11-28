@@ -1,6 +1,11 @@
-// src/components/Orders.jsx
-import React from 'react';
+import PropTypes from 'prop-types';
 
+//This is a temporary fix.  The proptypes should be more specific.
+Orders.propTypes = {
+  currentOrders: PropTypes.array.isRequired,
+  previousOrders: PropTypes.array.isRequired,
+  moveToPrevious: PropTypes.func.isRequired,
+};
 function Orders({ currentOrders, previousOrders, moveToPrevious }) {
   return (
     <div id="orders" className="grid-item">

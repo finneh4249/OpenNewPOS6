@@ -1,5 +1,3 @@
-import React from 'react';
-
 function TopButtonsRowOne() {
   return (
     <div id="topButtonsRowOne" className="grid-item">

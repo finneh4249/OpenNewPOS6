@@ -1,13 +1,20 @@
-// src/components/MenuButtonsRow.jsx
-import React, { useState } from 'react';
+// src/components/MenuButtonsRow.js
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import MenuSelector from './MenuSelector';
 import Menu from './Menu';
 import menus from '../data/menus';
 
 function MenuButtonsRow({ addCurrentOrder }) {
-  const [selectedMenu, setSelectedMenu] = useState(menus[0]);
+    const [selectedMenu, setSelectedMenu] = useState(menus[0]);
+  if (!addCurrentOrder) {
+    console.error("addCurrentOrder prop is missing in MenuButtonsRow component.");
+    return null; // or a fallback UI
+  }
 
-  return (
+  
+ 
+  return ( 
     <>
       <MenuSelector
         menus={menus}
@@ -20,5 +27,10 @@ function MenuButtonsRow({ addCurrentOrder }) {
     </>
   );
 }
+
+MenuButtonsRow.propTypes = {
+  addCurrentOrder: PropTypes.func.isRequired,
+};
+
 
 export default MenuButtonsRow;
