@@ -5,7 +5,6 @@
 @import url("main.css") layer(main);
 @import url("layout.css") layer(layout);
 @import url("button.css") layer(button);
-@import url("menu.css") layer(menu);
 
 @layer main{
     .menuTitle{
